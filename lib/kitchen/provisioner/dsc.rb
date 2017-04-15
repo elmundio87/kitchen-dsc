@@ -68,9 +68,10 @@ module Kitchen
         info("Staging DSC Resource Modules for copy to the SUT")
         if powershell_module?
           prepare_resource_style_directory
-        else
-          prepare_repo_style_directory
         end
+
+        prepare_repo_style_directory
+
         info("Staging DSC configuration script for copy to the SUT")
         prepare_configuration_script
       end
