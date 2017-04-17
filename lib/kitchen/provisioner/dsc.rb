@@ -252,7 +252,7 @@ module Kitchen
 
         if Dir.exist?(module_path)
           debug("Moving #{module_path} to #{sandbox_module_path}")
-          FileUtils.cp_r(module_path, sandbox_module_path)
+          FileUtils.cp_r("#{module_path}/.", sandbox_module_path)
         else
           debug("The modules path #{module_path} was not found. Not moving to #{sandbox_module_path}.")
         end
